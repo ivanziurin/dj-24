@@ -18,9 +18,6 @@ class AdvertisementViewSet(ModelViewSet):
     filterset_class = AdvertisementFilter
     ordering_fields = ['created_at']
 
-    #def perform_create(self, serializer):
-    #    serializer.save(user=self.request.user)
-
     def get_permissions(self):
         """Получение прав для действий."""
         if self.action in ["create", "update", "partial_update"]:
